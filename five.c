@@ -1,3 +1,4 @@
+  
 #include "stdio.h"
 #include "math.h"
 #include "windows.h"
@@ -13,7 +14,7 @@ long sum[M][M] = {{0}};//得分棋盘，储存得分情况
 int  p[20][5];//存储该位置的所有可能的五连珠情况
  
 int  player = 1, ai = 2, error = -1;
-int  num;//双方回合总数
+int  num=0;//双方回合总数
 int  now;//设置下棋标志
 int  flag0;//确定己方已下子
 int  gs;//游戏结束标志
@@ -49,7 +50,6 @@ int main()
  
     Initialize();//初始化棋盘，数据棋盘，和缓冲器
     RunGame();//进行整个对局*/
- 
     return 0;
 }
  
@@ -102,7 +102,8 @@ void RunGame()//进行整个对局
                 CGame();//电脑对局函数
                 if(Judge_Display())
                 {
-                    break;//对局结束
+					break;//对局结束
+                    
                 }
             }
             break;
